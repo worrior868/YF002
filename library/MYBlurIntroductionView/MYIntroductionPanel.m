@@ -21,6 +21,22 @@
 @property (nonatomic, assign) BOOL isCustomPanel;
 @property (nonatomic, assign) BOOL hasCustomAnimation;
 
+//panel1
+@property (weak, nonatomic) IBOutlet UIImageView *p1_device;
+@property (weak, nonatomic) IBOutlet UIImageView *p1_person;
+@property (weak, nonatomic) IBOutlet UILabel *p1_label1;
+@property (weak, nonatomic) IBOutlet UILabel *p1_label2;
+@property (weak, nonatomic) IBOutlet UIImageView *p1_phone;
+
+//panel2
+@property (weak, nonatomic) IBOutlet UIImageView *p2_hand;
+@property (weak, nonatomic) IBOutlet UIImageView *p2_phone;
+@property (weak, nonatomic) IBOutlet UILabel *p2_label;
+
+//panel3
+@property (weak, nonatomic) IBOutlet UIImageView *p3_pic;
+@property (weak, nonatomic) IBOutlet UILabel *p3_label;
+
 @end
 
 @implementation MYIntroductionPanel
@@ -224,7 +240,130 @@
 #pragma mark - Interaction Methods
 
 -(void)panelDidAppear{
-    //Implemented by subclass
+    /*
+     /panel1
+     @property (weak, nonatomic) IBOutlet UIImageView *p1_device;
+     @property (weak, nonatomic) IBOutlet UIImageView *p1_person;
+     @property (weak, nonatomic) IBOutlet UILabel *p1_label1;
+     @property (weak, nonatomic) IBOutlet UILabel *p1_label2;
+     @property (weak, nonatomic) IBOutlet UIImageView *p1_phone;
+     
+     //panel2
+     @property (weak, nonatomic) IBOutlet UIImageView *p2_hand;
+     @property (weak, nonatomic) IBOutlet UIImageView *p2_phone;
+     @property (weak, nonatomic) IBOutlet UILabel *p2_label;
+     
+     //panel3
+     @property (weak, nonatomic) IBOutlet UIImageView *p3_pic;
+     @property (weak, nonatomic) IBOutlet UILabel *p3_label;
+     */
+    
+    ///panel1
+    _p1_device.alpha= 0.1;
+    [UIView animateWithDuration:0.1 animations:^{
+        _p1_device.transform =CGAffineTransformMakeTranslation(0, -80);
+        
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 animations:^{
+            _p1_device.transform = CGAffineTransformMakeTranslation(0, 0);
+            _p1_device.alpha =1.0;
+        }];
+    }];
+    
+    _p1_person.alpha= 0.0;
+    [UIView animateWithDuration:0.8 animations:^{
+        _p1_person.transform =CGAffineTransformMakeTranslation(0, -80);
+        
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 animations:^{
+            _p1_person.transform = CGAffineTransformMakeTranslation(0, 0);
+            _p1_person.alpha =1.0;
+        }];
+    }];
+    
+    _p1_label1.alpha= 0.0;
+    [UIView animateWithDuration:1.5 animations:^{
+        _p1_label1.transform =CGAffineTransformMakeTranslation(-80, 0);
+        
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 animations:^{
+            _p1_label1.transform = CGAffineTransformMakeTranslation(0, 0);
+            _p1_label1.alpha =1.0;
+        }];
+    }];
+    
+    _p1_phone.alpha= 0.0;
+    [UIView animateWithDuration:1.5 animations:^{
+        _p1_phone.transform =CGAffineTransformMakeTranslation(0, 120);
+        
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 animations:^{
+            _p1_phone.transform = CGAffineTransformMakeTranslation(0, 0);
+            _p1_phone.alpha =1.0;
+        }];
+    }];
+    
+    
+    _p1_label2.alpha= 0.0;
+    [UIView animateWithDuration:2 animations:^{
+        _p1_label2.transform =CGAffineTransformMakeTranslation(120, 0);
+        
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 animations:^{
+            _p1_label2.transform = CGAffineTransformMakeTranslation(0, 0);
+            _p1_label2.alpha =1.0;
+        }];
+    }];
+    ///panel2
+     _p2_label.alpha =0.0;
+    [UIView animateWithDuration:1 animations:^{
+         _p2_label.alpha =1.0;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 animations:^{
+           
+        }];
+    }];
+    
+
+    _p2_phone.alpha= 0.1;
+    [UIView animateWithDuration:0.1 animations:^{
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 animations:^{
+            _p2_phone.transform = CGAffineTransformMakeTranslation(0, 0);
+            _p2_phone.alpha =1.0;
+        }];
+    }];
+    
+    _p2_hand.alpha= 1.0;
+
+    [UIView animateWithDuration:2 delay:0.2 options:UIViewAnimationOptionAutoreverse animations:^{
+        _p2_hand.transform =CGAffineTransformMakeTranslation(-50, 0);
+    } completion:^(BOOL finished) {
+        _p2_hand.transform = CGAffineTransformMakeTranslation(0, 0);
+    }];
+    
+    ///panel3
+    _p3_pic.alpha= 0.1;
+    [UIView animateWithDuration:0.4 animations:^{
+        _p3_pic.transform= CGAffineTransformMakeScale(1.5, 1.5);
+        _p3_pic.alpha= 1;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 animations:^{
+            _p3_pic.transform= CGAffineTransformMakeScale(1, 1);
+            _p3_pic.alpha= 1;
+        }];
+    }];
+    
+    _p3_label.alpha= 0.1;
+    [UIView animateWithDuration:0.8 animations:^{
+        _p3_label.transform = CGAffineTransformMakeTranslation(0, 80);
+        _p3_label.alpha= 0.0;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 animations:^{
+            _p3_label.transform = CGAffineTransformMakeTranslation(0, 0);
+        }];
+    }];
+   
 }
 
 -(void)panelDidDisappear{

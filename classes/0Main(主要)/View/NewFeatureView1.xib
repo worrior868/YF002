@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,7 +15,7 @@
                     <rect key="frame" x="15" y="-18" width="285" height="545"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide1Person" translatesAutoresizingMaskIntoConstraints="NO" id="ZQD-yS-DTz">
-                            <rect key="frame" x="71" y="30" width="145" height="218"/>
+                            <rect key="frame" x="70" y="30" width="145" height="218"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="BounceDown"/>
                                 <userDefinedRuntimeAttribute type="number" keyPath="delay">
@@ -23,17 +23,8 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide2Iphone" translatesAutoresizingMaskIntoConstraints="NO" id="dht-qP-Wcm">
-                            <rect key="frame" x="81" y="298" width="122" height="183"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="BounceUp"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                    <integer key="value" value="2"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="能独立的工作" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGE-MN-fi4">
-                            <rect key="frame" x="17" y="234" width="126" height="21"/>
+                            <rect key="frame" x="79" y="240" width="126" height="21"/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                             <color key="textColor" red="0.73333333329999995" green="0.52941176469999995" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -55,7 +46,7 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="通过手机端控制" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXH-Ju-RZa">
-                            <rect key="frame" x="120" y="262" width="150" height="22"/>
+                            <rect key="frame" x="65" y="269" width="150" height="22"/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                             <color key="textColor" red="0.73333333329999995" green="0.52941176469999995" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -67,12 +58,28 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide2Iphone" translatesAutoresizingMaskIntoConstraints="NO" id="dht-qP-Wcm">
+                            <rect key="frame" x="81" y="299" width="122" height="183"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="BounceUp"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="p1_device" destination="wUz-76-goX" id="WPv-aj-42d"/>
+                <outlet property="p1_label1" destination="rGE-MN-fi4" id="kl9-gM-ZCS"/>
+                <outlet property="p1_label2" destination="cXH-Ju-RZa" id="Iil-Vb-bfs"/>
+                <outlet property="p1_person" destination="ZQD-yS-DTz" id="Tqe-XK-oQS"/>
+                <outlet property="p1_phone" destination="dht-qP-Wcm" id="zqD-ks-BJo"/>
+            </connections>
             <point key="canvasLocation" x="252" y="391"/>
         </view>
     </objects>

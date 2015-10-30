@@ -73,10 +73,10 @@ IBOutlet TextFieldValidator *password;
     // 获得当前软件的版本号
     NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
     
-    if ([currentVersion isEqualToString:lastVersion]) {
+    if (![currentVersion isEqualToString:lastVersion]) {
         
     }
-    else { // 新版本
+    else {
         // 存储新版本
         [defaults setObject:currentVersion forKey:@"CFBundleVersion"];
         [defaults synchronize];
@@ -112,8 +112,6 @@ IBOutlet TextFieldValidator *password;
 
 #pragma mark - 登陆输入验证
 -(void)setupAlerts{
-   
-    
     [userName addRegx:REGEX_USER_NAME withMsg:@"输入注册邮箱地址"];
     
     [password addRegx:REGEX_PASSWORD_LIMIT withMsg:@"长度在6~20位之间的密码"];
@@ -125,8 +123,6 @@ IBOutlet TextFieldValidator *password;
 -(void)introduction:(MYBlurIntroductionView *)introductionView didChangeToPanel:(MYIntroductionPanel *)panel withIndex:(NSInteger)panelIndex{
     NSLog(@"Introduction did change to panel %ld", (long)panelIndex);
     
-    //You can edit introduction view properties right from the delegate method!
-    //If it is the first panel, change the color to green!
     if (panelIndex == 0) {
         [introductionView setBackgroundColor:[UIColor colorWithRed:90.0f/255.0f green:175.0f/255.0f blue:113.0f/255.0f alpha:0.65]];
     }
